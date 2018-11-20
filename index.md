@@ -1,37 +1,7 @@
-## Welcome to GitHub Pages
+## EdPlan Standard
 
-You can use the [editor on GitHub](https://github.com/ottonomy/edplan-standard/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+This is an effort to describe Education Plans for students for interoperability between systems that author and track EdPlans in partnership with higher education institutions and serving their students. It is a collaboration between state institutions and vendors serving Community Colleges in California.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Project Structure
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/ottonomy/edplan-standard/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+This site consists of an Open API v3 Definition for the EdPlan Standard and documentation written in Markdown that will be rendered to a website. This will cover the structure of the data models and APIs that make up the standard as well as context and usage information.
