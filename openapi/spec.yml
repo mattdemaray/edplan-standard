@@ -19,11 +19,14 @@ components:
       properties:
         programID:
           type: string
-        activeFlag:
-          type: boolean
-        statusDate:
-          type: string
-          format: date-time
+        status:
+          type: object
+          properties:
+            active:
+              type: boolean
+            lastUpdated:
+              type: string
+              format: date-time
         awardName:
           description: Claim/Award/Certificate Name
           type: string
@@ -53,13 +56,31 @@ components:
         issuer:
           type: string
         requirements:
-          type: object
+          $ref: "#/components/schemas/RequirementsSpec"
         incrementalObjectives:
-          type: object
+          type: array
+          items:
+            $ref: "#/components/schemas/IncrementalObjective"
         suggestedSequences:
           type: array
           items:
             $ref: "#/components/schemas/AcademicSequence"
+
+    RequirementsSpec:
+      type: object
+      description: >
+        Academic and non-academic requirements expressed in one of potentially
+        multiple json formats / versions.
+      properties:
+        format:
+          type: string
+        version:
+          type: string
+        contents:
+          type: object
+
+    IncrementalObjective:
+      type: object
 
     AcademicSequence:
       type: array
@@ -109,7 +130,7 @@ components:
         personalizedProgramPlan:
           $ref: "#/components/schemas/PersonalizedProgramPlan"
         remainingSteps:
-          $ref: "#/components/schemas/RemainingSteps"
+          $ref: "#/components/schemas/RequirementsSpec"
 
     PersonalizedAwardGoal:
       allOf:
@@ -133,11 +154,6 @@ components:
             oneOf:
               - $ref: "#/components/schemas/PlannedCourse"
               - $ref: "#/components/schemas/PlannedActivity"
-
-    RemainingSteps:
-      type: object
-      properties:
-
 
     StudentRecord:
       oneOf:
